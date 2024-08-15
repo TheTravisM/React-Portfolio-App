@@ -1,0 +1,86 @@
+section#skills {
+  .title {
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'MuseoModerno', system-ui;
+  }
+
+  .des {
+    color: #eee5;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  ul.skills-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: space-between;
+    gap: 3vw;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 70%;
+      height: 70%;
+      --angle: 45;
+      background-image: var(--80-linear-rotate);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      border-radius: 20px;
+      background-size: 200% auto;
+    }
+
+    li.skills-listItem {
+      display: flex;
+      flex-direction: column;
+      gap:8px;
+      backdrop-filter: blur(50px);
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(253, 0, 249,0);
+      background-color: #01082488;
+      transition: all .5s linear;
+      transform: scale(1);
+
+      &:hover {
+        background-color: #01082488;
+        backdrop-filter: blur(75px);
+        border: 1px solid rgba(253, 0, 249,.25);
+        transform: scale(1.1);
+
+        svg {
+          --angle: 45;
+          //background-image: var(--80-linear-rotate);
+          border: 1px solid rgba(253, 0, 249,.25);
+          transform: scale(1.1);
+        }
+      }
+
+      h3.skills-listItem-title {
+        font-weight: 500;
+        line-height: 2;
+      }
+
+      svg {
+        font-size: 30px;
+        background-color: #eee2;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(253, 0, 249,0);
+        transition: all .5s linear;
+        width: fit-content;
+      }
+
+      .skills-listItem-description {
+        color: rgba(250,250,250,.5);
+        text-align: left;
+        width: 100%;
+        font-size: small;
+      }
+    }
+  }
+}

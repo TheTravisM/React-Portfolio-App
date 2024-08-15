@@ -1,0 +1,29 @@
+
+:root {
+  --teal: #11ffc3;
+  --hot-pink: rgba(253, 0, 249,1);
+  --dark-gray: rgba(26, 26, 26,1);
+  --80-linear-rotate: linear-gradient(var(--angle),var(--teal), var(--hot-pink));
+  --80-linear-shine: linear-gradient(to right,var(--teal), var(--hot-pink));
+}
+
+// Nav
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+// Home Screen
+@keyframes shine {
+  to {
+      background-position: 200% center;
+  }
+}
+

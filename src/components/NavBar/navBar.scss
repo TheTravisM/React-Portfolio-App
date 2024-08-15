@@ -13,24 +13,66 @@ header {
   box-sizing: border-box;
   z-index: 100;
   backdrop-filter: blur(10px);
-  & img {
+  img {
     width: 50px;
   }
-  & .logo,
+  .logo {
+    font-size: 40px;
+    font-weight: bold;
+    //background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
+    background-size: 200% auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    //animation: shine 5s linear infinite;
+    //background-image: linear-gradient(var(--angle),#11ffc3, #fd00f9);
+    background-image: var(--80-linear-rotate);
+    animation: 20s rotate linear infinite;
+  }
   nav {
     display: flex;
     align-items: center;
     gap: 30px;
-    & span {
+    gap: 16px;
+    button {
+      font-family: "MuseoModerno";
+      font-size: 18px;
+      font-weight: 200;
+      color: #eee;
       cursor: pointer;
-    }
-    & .active {
-      color: #e945e3;
-      text-shadow: 0 0 5px #7A43B6;
+      border-radius: 8px;
+      border: 1px solid rgba(253, 0, 249,0);
+      background: rgba(26, 26, 26,0);
+      padding: 10px 16px;
+      &:hover {
+        color: #fff;
+        background: rgba(0,0,0,1);
+        border: 1px solid rgba(253, 0, 249,.25);
+        transition: all .25s ease-in;
+        cursor: pointer;
+      }
+      &.active {
+        color: #e945e3;
+        text-shadow: 0 0 5px #7A43B6;
+        border: 1px solid rgba(253, 0, 249,.25);
+        background: rgba(26, 26, 26,.25);
+        transition: all .5s ease-in;
+      }
     }
   }
-  & .icon-bar {
+  .icon-bar {
     width: 30px;
     display: none;
   }
 }
+
+// @property --angle {
+//   syntax: '<angle>';
+//   initial-value: 0deg;
+//   inherits: false;
+// }
+
+// @keyframes rotate {
+//   to {
+//     --angle: 360deg;
+//   }
+// }

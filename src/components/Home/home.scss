@@ -15,9 +15,11 @@ section#home {
       line-height: 1em;
 
       span {
-        background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
+        //background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
+        background-image: var(--80-linear-shine);
         background-size: 200% auto;
         -webkit-text-fill-color: transparent;
+        background-clip: text;
         -webkit-background-clip: text;
         animation: shine 5s linear infinite;
       }
@@ -77,11 +79,17 @@ section#home {
         font-size: 1.2em;
 
         div:nth-child(1),
-        div:nth-child(2),
-        div:nth-child(3) {
+        div:nth-child(2) {
           font-weight: bold;
         }
       }
     }
   }
 }
+
+@keyframes shine {
+  to {
+      background-position: 200% center;
+  }
+}
+
