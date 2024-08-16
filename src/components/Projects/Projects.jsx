@@ -8,7 +8,7 @@ const Projects = () => {
     <section id="projects">
       <h2 className="title project-title">My Projects</h2>
 
-      <div className="des">
+      <div className="project-description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloribus
         quisquam quae dolor aspernatur quaerat cumque qui perferendis asperiores
         rerum cum commodi deserunt ipsa natus earum nam, dicta dignissimos

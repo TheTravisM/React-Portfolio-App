@@ -19,12 +19,9 @@ header {
   .logo {
     font-size: 40px;
     font-weight: bold;
-    //background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
     background-size: 200% auto;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    //animation: shine 5s linear infinite;
-    //background-image: linear-gradient(var(--angle),#11ffc3, #fd00f9);
     background-image: var(--80-linear-rotate);
     animation: 20s rotate linear infinite;
   }

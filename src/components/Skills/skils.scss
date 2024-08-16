@@ -1,3 +1,4 @@
+
 section#skills {
   .title {
     text-align: center;
@@ -24,8 +25,8 @@ section#skills {
       content: '';
       width: 70%;
       height: 70%;
-      --angle: 45;
-      background-image: var(--80-linear-rotate);
+      background-image: linear-gradient(var(--angle),var(--teal), var(--hot-pink));
+      animation: 20s rotate linear infinite;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -53,8 +54,6 @@ section#skills {
         transform: scale(1.1);
 
         svg {
-          --angle: 45;
-          //background-image: var(--80-linear-rotate);
           border: 1px solid rgba(253, 0, 249,.25);
           transform: scale(1.1);
         }

@@ -10,13 +10,16 @@
 // Nav
 @property --angle {
   syntax: '<angle>';
-  initial-value: 0deg;
+  initial-value: 45deg;
   inherits: false;
 }
 
 @keyframes rotate {
+  from {
+    --angle: 45deg;
+  }
   to {
-    --angle: 360deg;
+    --angle: 405deg; /* 45deg + 360deg */
   }
 }
 
