@@ -1,8 +1,13 @@
-import React from 'react'
-import './projects.scss'
-import projectsData from './projects.json';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPersonCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import "./projects.scss";
+import projectsData from "./projects.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPersonCircleQuestion,
+  faEarthAmericas,
+} from "@fortawesome/free-solid-svg-icons";
+//import CustomHook from './CustomHook';
+
 const Projects = () => {
   return (
     <section id="projects">
@@ -18,19 +23,30 @@ const Projects = () => {
       <ul className="projects-list">
         {projectsData.map((value, key) => (
           <li key={key} className="projects-listItem">
-            <div className="images">
+            <div className="image-wrapper">
               <img src={value.images} alt="" />
             </div>
             <div className="content">
               <h3 className="projects-listItem-title">{value.name}</h3>
               <div className="projects-listItem-description">{value.des}</div>
+
               <div className="mission">
-                <div><FontAwesomeIcon icon={faPersonCircleQuestion}/></div>
-                <div className="">
-                  <h4>Missions</h4>
-                  <div className="de">
-                    {value.mission}
-                  </div>
+                <div>
+                  <FontAwesomeIcon icon={faPersonCircleQuestion} />
+                </div>
+                <div>
+                  <h4>Mission</h4>
+                  <div className="misson-description">{value.mission}</div>
+                </div>
+              </div>
+
+              <div className="mission">
+                <div>
+                  <FontAwesomeIcon icon={faEarthAmericas} />
+                </div>
+                <div>
+                  <h4>Techology</h4>
+                  <div className="misson-description">{value.language}</div>
                 </div>
               </div>
             </div>
@@ -39,6 +55,6 @@ const Projects = () => {
       </ul>
     </section>
   );
-}
+};
 
-export default Projects
+export default Projects;

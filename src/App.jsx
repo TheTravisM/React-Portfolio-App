@@ -6,7 +6,7 @@ import NavBar from './components/NavBar/NavBar'
 import Home from './components/Home/Home'
 import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
-import Contacts from './components/Contacts/Contacts'
+import Contact from './components/Contact/Contact'
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Home />
       <Skills />
       <Projects />
-      <Contacts />
+      <Contact />
     </main>
   )
 }
