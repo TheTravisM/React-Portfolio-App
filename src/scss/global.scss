@@ -30,3 +30,16 @@
   }
 }
 
+.animation {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+&.active {
+  transform: translateY(0px);
+  filter: blur(0px);
+  opacity: 1;
+
+}
+
+}

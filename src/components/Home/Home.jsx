@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react' 
 import './home.scss'
 import MikolayResume from '../../assets/Travis-Mikolay-Resume.pdf'
 import AvatarImg from '../../assets/images/avatar.jpg';
+import CustomHook from '../CustomHook';
 
 const Home = () => {
+  const scrollTab = useRef();
+  CustomHook(scrollTab);
   return (
-    <section id="home" className="home">
+    <section id="home" ref={scrollTab}>
       <div className="content">
         <div className="name">
           MY NAME IS <span>TRAVIS</span>

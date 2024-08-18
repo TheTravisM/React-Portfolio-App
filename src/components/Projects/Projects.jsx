@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from 'react' 
 import "./projects.scss";
 import projectsData from "./projects.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,14 +6,26 @@ import {
   faPersonCircleQuestion,
   faEarthAmericas,
 } from "@fortawesome/free-solid-svg-icons";
-//import CustomHook from './CustomHook';
+import CustomHook from '../CustomHook';
 
 const Projects = () => {
-  return (
-    <section id="projects">
-      <h2 className="title project-title">My Projects</h2>
+  const divs = useRef([]);
+  const scrollTab = useRef();
+  CustomHook(scrollTab, divs);
 
-      <div className="project-description">
+  return (
+    <section id="projects" ref={scrollTab}>
+      <h2 
+        className="title project-title"
+        ref={(el) => el && divs.current.push(el)}
+      >
+        My Projects
+      </h2>
+
+      <div 
+        className="project-description"
+        ref={(el) => el && divs.current.push(el)}
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloribus
         quisquam quae dolor aspernatur quaerat cumque qui perferendis asperiores
         rerum cum commodi deserunt ipsa natus earum nam, dicta dignissimos
@@ -22,7 +34,11 @@ const Projects = () => {
 
       <ul className="projects-list">
         {projectsData.map((value, key) => (
-          <li key={key} className="projects-listItem">
+          <li 
+            key={key} 
+            className="projects-listItem"
+            ref={(el) => el && divs.current.push(el)}
+          >
             <div className="image-wrapper">
               <img src={value.images} alt="" />
             </div>
