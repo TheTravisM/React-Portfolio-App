@@ -85,7 +85,7 @@
 
 
 
-body{
+body {
   margin: 0;
   font-family: Poppins;
   background-color: #010824;
@@ -93,30 +93,26 @@ body{
   font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
-  background-image: linear-gradient(
-      to right, transparent 0 49px, #eee1 49px
-  ),
-  linear-gradient(
-      to bottom, transparent 0 49px, #eee1 49px
-  );
+  background-image: linear-gradient(to right, transparent 0 49px, #eee1 49px),
+    linear-gradient(to bottom, transparent 0 49px, #eee1 49px);
   background-size: 50px 50px;
-  &::before{
-      position: fixed;
-      width: 400px;
-      height: 400px;
-      content: '';
-      background-image: linear-gradient(
-          to right, #D02E23, #7A43B6
-      );
-      //z-index: -1;
-      top: -200px;
-      left: calc(50% - 200px);
-      border-radius: 50% 50% 0% 0%;
-      pointer-events: none;
-      filter: blur(250px);
+
+  &::before {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    content: '';
+    background-image: linear-gradient(to right, #D02E23, #7A43B6);
+    //z-index: -1;
+    top: -200px;
+    left: calc(50% - 200px);
+    border-radius: 50% 50% 0% 0%;
+    pointer-events: none;
+    filter: blur(250px);
   }
 }
-main{
+
+main {
   width: min(1300px, 100%);
   //max-width: 100%;
   margin: auto;
@@ -130,4 +126,8 @@ section {
   padding: 50px;
   box-sizing: border-box;
   top: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  section { padding: 20px; }
 }

@@ -10,7 +10,7 @@ section#home {
     font-family: 'MuseoModerno', system-ui;
 
     .name {
-      font-size: 7em;
+      font-size: 112px;
       font-weight: bold;
       line-height: 1em;
 
@@ -32,16 +32,42 @@ section#home {
     }
 
     a {
+      position: relative;
       display: block;
       font-size: large;
       color: #eee;
       font-weight: bold;
       text-decoration: none;
-      border: 1px solid #eee;
       background-color: transparent;
       width: max-content;
       padding: 20px 30px;
       border-radius: 40px;
+      animation: 20s rotate linear infinite;
+      transition: all 1s linear;
+      cursor: pointer;
+      z-index: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 40px;
+        padding: 1px; /* Width of the border */
+        background: linear-gradient(#eee, #eee);
+        -webkit-mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        animation: 10s rotate linear infinite;
+        transition: all 1s linear;
+      }
+      &:hover::before {
+        background: linear-gradient(var(--angle), #11ffc3, #fd00f9);
+      }
     }
   }
 
@@ -92,3 +118,40 @@ section#home {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  section#home {
+    .content {
+      .name {
+        font-size: 4em;
+      }
+    }
+
+    .avatar {
+      & img {
+        max-height: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section#home {
+      grid-template-columns: 1fr;
+      padding-top: 70px;
+      justify-items: center;
+
+      .content {
+        .name {
+          font-size: 48px;
+        }
+        a {
+          margin: auto;
+          font-size: small;
+        }
+      }
+
+      .avatar {
+        grid-row-start: 1;
+      }
+    }
+  }

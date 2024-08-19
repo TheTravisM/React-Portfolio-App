@@ -25,16 +25,16 @@ const NavBar = ({ activeTab }) => {
         {linkNav.map((value, key) => (
           <button
             key={key}
-            className={activeTab === value ? "active" : ""}
+            className={activeTab === value ? "nav--expanded" : ""}
             onClick={() => changeTab(value)}
           >
             {value}
           </button>
         ))}
       </nav>
-      <div className="icon-bar" onClick={toggleNav}>
+      <button className="icon-bar" onClick={toggleNav}>
         <FontAwesomeIcon icon={faBars} />
-      </div>
+      </button>
     </header>
   );
 };

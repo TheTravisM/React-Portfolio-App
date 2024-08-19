@@ -83,3 +83,11 @@ section#skills {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  section#skills {
+    ul.skills-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
