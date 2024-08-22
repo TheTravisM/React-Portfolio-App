@@ -39,9 +39,9 @@ const Projects = () => {
             className="projects-listItem"
             ref={(el) => el && divs.current.push(el)}
           >
-            <div className="image-wrapper">
+            <a href="value.url" className="image-wrapper">
               <img src={value.images} alt="" />
-            </div>
+            </a>
             <div className="content">
               <h3 className="projects-listItem-title">
                 {value.name}
@@ -49,6 +49,9 @@ const Projects = () => {
               <div className="projects-listItem-description">
                 {value.des}
               </div>
+              <a href="value.url" className="project-link">
+                Link to project
+              </a>
 
               <div className="mission">
                 <div>
@@ -56,7 +59,9 @@ const Projects = () => {
                 </div>
                 <div>
                   <h4>Mission</h4>
-                  <div className="misson-description">{value.mission}</div>
+                  <div className="misson-description">
+                    {value.mission}
+                  </div>
                 </div>
               </div>
 
@@ -66,7 +71,9 @@ const Projects = () => {
                 </div>
                 <div>
                   <h4>Techology</h4>
-                  <div className="misson-description">{value.technology}</div>
+                  <div className="misson-description">
+                    {value.technology}
+                  </div>
                 </div>
               </div>
             </div>
