@@ -4,41 +4,41 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "assets/images/project1.PNG"
+    "images": "img/project1.png"
   },
   {
     "name": "Project Real-time chating in website",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "./assets/images/project2.PNG"
+    "images": "./img/project2.png"
   },
   {
     "name": "Project Real-time chating in website",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "../assets/images/project1.PNG"
+    "images": "../assets/images/project1.png"
   },
   {
     "name": "Project Real-time chating in website",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "src/assets/images/project2.PNG"
+    "images": "img/project2.png"
   },
   {
     "name": "Project Real-time chating in website",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "src/assets/images/project1.PNG"
+    "images": "src/assets/images/project1.png"
   },
   {
     "name": "Project Real-time chating in website",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "src/assets/images/project2.PNG"
+    "images": "src/assets/images/project2.png"
   }
 ]
