@@ -1,44 +1,58 @@
 [
   {
-    "name": "Project Real-time chating in website",
+    "name": "Course Directory",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/project1.png"
+    "images": "img/directory-app.jpg",
+    "url": "https://coursedirectory-travis-mikolays-projects.vercel.app"
   },
   {
-    "name": "Project Real-time chating in website",
+    "name": "Cross CHX Dashboard",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "./img/project2.png"
+    "images": "img/healthcare-dashboard.jpg",
+    "url": "https://cross-chx-functional-ui.vercel.app"
   },
   {
-    "name": "Project Real-time chating in website",
+    "name": "Gif Generator App",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "../assets/images/project1.png"
+    "images": "img/gif-search.jpg",
+    "url": "https://gif-search-app-one.vercel.app"
   },
   {
-    "name": "Project Real-time chating in website",
+    "name": "Arya's List Of Names",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/project2.png"
+    "images": "img/project2.png",
+    "url": "https://aryastarkslistofnames-travis-mikolays-projects.vercel.app"
   },
   {
-    "name": "Project Real-time chating in website",
+    "name": "Cengage UI Style Guide",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "src/assets/images/project1.png"
+    "images": "img/cenage-ui-style-guide.jpg",
+    "url": "https://cengage-ui-style-guide.vercel.app"
   },
   {
-    "name": "Project Real-time chating in website",
+    "name": "Wedding",
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "language": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "src/assets/images/project2.png"
+    "images": "img/wedding-site.jpg",
+    "url": "https://thetravism.github.io/Ang-Wedding-App/"
+  },
+  {
+    "name": "Oracle Workbench",
+    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
+    "mission": "Back-end Developer, system analysis and design",
+    "language": "HTML5, CSS3, React JS, SockerIO,...",
+    "images": "img/oracle-workbench.jpg",
+    "url": "https://oracle-workbench.vercel.app"
   }
 ]

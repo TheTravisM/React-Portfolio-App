@@ -43,8 +43,12 @@ const Projects = () => {
               <img src={value.images} alt="" />
             </div>
             <div className="content">
-              <h3 className="projects-listItem-title">{value.name}</h3>
-              <div className="projects-listItem-description">{value.des}</div>
+              <h3 className="projects-listItem-title">
+                {value.name}
+              </h3>
+              <div className="projects-listItem-description">
+                {value.des}
+              </div>
 
               <div className="mission">
                 <div>
@@ -62,7 +66,7 @@ const Projects = () => {
                 </div>
                 <div>
                   <h4>Techology</h4>
-                  <div className="misson-description">{value.language}</div>
+                  <div className="misson-description">{value.technology}</div>
                 </div>
               </div>
             </div>
