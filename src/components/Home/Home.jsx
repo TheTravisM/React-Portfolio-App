@@ -1,7 +1,7 @@
 import React, { useRef } from 'react' 
 import './home.scss'
 import MikolayResume from '../../assets/Travis-Mikolay-Resume.pdf'
-import AvatarImg from '../../assets/images/avatar.jpg';
+import ProfileImg from '../../assets/images/ProfilePic.jpg';
 import CustomHook from '../CustomHook';
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       <div className="avatar">
         <div className='card'>
-          <img src={AvatarImg} alt="profile image of travis" />
+          <img src={ProfileImg} alt="profile image of travis" />
           <div className="info">
             <div className="">UI/UX Developer</div>
             <div className="">United States</div>
