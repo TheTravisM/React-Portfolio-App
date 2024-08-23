@@ -3,7 +3,6 @@ section#projects {
     font-size: 5vw;
     text-align: center;
     font-family: 'MuseoModerno', system-ui;
-    margin-top: 100px;
   }
 
   .project-description {
@@ -60,6 +59,16 @@ section#projects {
         width: 100%;
       }
 
+      a.project-link {
+        color:#11ffc3;
+        padding: 8px 0;
+        display: flex;
+        &:hover {
+          color:#fd00f9;
+        }
+      }
+
+
       .mission {
         display: grid;
         grid-template-columns: 70px 1fr;
@@ -90,3 +99,29 @@ section#projects {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  section#projects {
+      .projects-list {
+        .projects-listItem {
+          grid-template-columns: 1fr;
+
+          .content {
+            h3.projects-listItem-title {
+              font-size: 1.2em;
+              margin-bottom: 1em;
+            }
+          }
+        }
+
+        .projects-listItem:nth-child(2n) {
+          .content,
+          .image-wrapper {
+            grid-row-start: auto;
+            grid-column-start: auto;
+            grid-column-end: auto;
+          }
+        }
+      }
+    }
+  }

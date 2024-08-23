@@ -11,7 +11,8 @@ const Home = () => {
     <section id="home" ref={scrollTab}>
       <div className="content">
         <div className="name">
-          MY NAME IS <span>TRAVIS</span>
+          <span>TRAVIS</span>
+          <br/>The Engineer
         </div>
         <div className="des">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias ducimus, corrupti error inventore labore reprehenderit vero laudantium tempore itaque iste. Corporis pariatur voluptate cumque officiis optio et molestias minima cum.

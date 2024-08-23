@@ -6,10 +6,6 @@ const CustomHook = (refTab = null, refList = null) => {
   const divs = refList;
   const activeTab = useSelector(state => state.activeTab);
   useEffect(() => {
-    // if(scrollTab.current.classList.contains(activeTab)){
-    //     const componentNode = scrollTab.current;
-    //     componentNode.scrollIntoView({ behavior: 'smooth' });
-    // }
 
     const element = document.getElementById(activeTab);
     if (element) {

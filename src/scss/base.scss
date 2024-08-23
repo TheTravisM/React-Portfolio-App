@@ -74,7 +74,7 @@
  * Hide.................Helper classes to hide content
  */
 
-// SETTINGS
+/* SETTINGS  */
 @import "./generic.scss";
 
 @import "./global.scss";
@@ -83,12 +83,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;500;700&display=swap');
 
-
-
 body {
   margin: 0;
   font-family: Poppins;
-  background-color: #010824;
+  background-color: slateblue;
   color: #eee;
   font-size: 16px;
   line-height: 1.8;
@@ -102,8 +100,7 @@ body {
     width: 400px;
     height: 400px;
     content: '';
-    background-image: linear-gradient(to right, #D02E23, #7A43B6);
-    //z-index: -1;
+    background-image: linear-gradient(to right, aqua, #7A43B6);
     top: -200px;
     left: calc(50% - 200px);
     border-radius: 50% 50% 0% 0%;

@@ -11,7 +11,7 @@ const NavBar = ({ activeTab }) => {
   const [linkNav] = useState(["home", "skills", "projects", "contact"]);
   const [statusNav, changeStatusNav] = useState(null);
   const toggleNav = () => {
-    changeStatusNav(statusNav === null ? "nav--active" : null);
+    changeStatusNav(statusNav === null ? "nav--exanded" : null);
   };
   const changeTab = (value) => {
     dispatch(changeTabActive(value));
@@ -25,7 +25,7 @@ const NavBar = ({ activeTab }) => {
         {linkNav.map((value, key) => (
           <button
             key={key}
-            className={activeTab === value ? "nav--expanded" : ""}
+            className={activeTab === value ? "btn--active" : ""}
             onClick={() => changeTab(value)}
           >
             {value}

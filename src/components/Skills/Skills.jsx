@@ -5,26 +5,6 @@ import './skils.scss';
 import skillsData from './skills.json';
 import CustomHook from '../CustomHook';
 
-// import {
-//   faReact,
-//   //faHtml,
-//   faHtml5,
-//   faCss3,
-//   faJs,
-//   faVuejs,
-//   faLaravel,
-//   // faVite,
-//   // faNextjs,
-//   // faCode,
-//   // faGithub,
-//   // faAndroid,
-//   // faFigma,
-//   // faSketch,
-//   // faWordpress,
-
-// } from '@fortawesome/free-brands-svg-icons';
-
-
 const Skills = () => {
   const divs = useRef([]);
   const scrollTab = useRef();

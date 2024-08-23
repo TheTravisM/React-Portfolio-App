@@ -10,11 +10,12 @@ section#home {
     font-family: 'MuseoModerno', system-ui;
 
     .name {
-      font-size: 112px;
+      font-size: 92px;
       font-weight: bold;
       line-height: 1em;
 
       span {
+        font-size: 112px;
         background-image: var(--80-linear-shine);
         background-size: 200% auto;
         -webkit-text-fill-color: transparent;
@@ -43,9 +44,12 @@ section#home {
       padding: 20px 30px;
       border-radius: 40px;
       animation: 20s rotate linear infinite;
-      transition: all 1s linear;
+      transition: all .5s linear color .25 linear;
       cursor: pointer;
       z-index: 1;
+      &:hover {
+        color: #11ffc3;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -78,10 +82,10 @@ section#home {
       display: inline-flex;
       flex-direction: column;
       width: min(100%, 400px);
-      box-shadow: 0 150px 150px #e945e333;
+      box-shadow: 0 150px 150px #11ffc333;
       transition: 0.5s;
       &:hover {
-        box-shadow: 0 150px 150px #e945e355;
+        box-shadow: 0 150px 150px #11ffc355;
       }
 
       img {
@@ -146,7 +150,7 @@ section#home {
         }
         a {
           margin: auto;
-          font-size: small;
+          font-size: 21px;
         }
       }
 

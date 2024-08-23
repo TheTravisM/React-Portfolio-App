@@ -7,7 +7,13 @@
   --80-linear-shine: linear-gradient(to right,var(--teal), var(--hot-pink));
 }
 
-// Nav
+html body *,
+html body *::before,
+html body *::after {
+  transition: all .25s linear;
+}
+
+/* Nav */
 @property --angle {
   syntax: '<angle>';
   initial-value: 45deg;
@@ -23,7 +29,7 @@
   }
 }
 
-// Home Screen
+/* Home Screen */
 @keyframes shine {
   to {
       background-position: 200% center;
