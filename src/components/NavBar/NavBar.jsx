@@ -11,7 +11,7 @@ const NavBar = ({ activeTab }) => {
   const [linkNav] = useState(["home", "skills", "projects", "contact"]);
   const [statusNav, changeStatusNav] = useState(null);
   const toggleNav = () => {
-    changeStatusNav(statusNav === null ? "active" : null);
+    changeStatusNav(statusNav === null ? "nav--active" : null);
   };
   const changeTab = (value) => {
     dispatch(changeTabActive(value));
