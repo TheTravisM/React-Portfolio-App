@@ -17,7 +17,7 @@ const Home = () => {
         <div className="des">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias ducimus, corrupti error inventore labore reprehenderit vero laudantium tempore itaque iste. Corporis pariatur voluptate cumque officiis optio et molestias minima cum.
         </div>
-        <a href={MikolayResume} target="_blank" rel="noopener noreferrer">
+        <a className="btn-download" href={MikolayResume} target="_blank" rel="noopener noreferrer">
           Download My Resume
         </a>
       </div>
