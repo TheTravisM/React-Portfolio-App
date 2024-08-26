@@ -21,15 +21,12 @@ const Home = () => {
           Download My Resume
         </a>
       </div>
-      <div className="avatar">
-        <div className='card'>
-          <img src={ProfileImg} alt="profile image of travis" />
-          <div className="info">
-            <div className="">UI/UX Developer</div>
-            <div className="">United States</div>
-            <div className="">KickAss Pirate</div>
-          </div>
+      <div className="home-profile-img-wrapper">
+        <div className="home-profile-img-mask">
+        <img src={ProfileImg} className="home-profile-img" 
+        alt="profile image of travis" />
         </div>
+        
       </div>
     </section>
   )
