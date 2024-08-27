@@ -97,52 +97,12 @@ section#home {
       display: flex;
       position: relative;
       width: 100%;
-      height: min(50vh, 700px);
-      height: min(700px, 50vh);
+      //height: min(50vh, 700px);
       object-fit: cover;
       object-position: top;
       clip-path: polygon(81% 0, 100% 18%, 100% 100%, 0 100%, 0 0);
     }
   }
-  // .avatar {
-  //   text-align: right;
-
-  //   .card {
-  //     display: inline-flex;
-  //     flex-direction: column;
-  //     width: min(100%, 400px);
-  //     box-shadow: 0 150px 150px #11ffc333;
-  //     transition: 0.5s;
-  //     &:hover {
-  //       box-shadow: 0 150px 150px #11ffc355;
-  //     }
-
-  //     img {
-  //       width: 100%;
-  //       height: min(50vh, 700px);
-  //       height: min(700px, 50vh);
-  //       object-fit: cover;
-  //       object-position: top;
-  //       clip-path: polygon(81% 0, 100% 18%, 100% 100%, 0 100%, 0 0);
-  //     }
-
-  //     .info {
-  //       background-color: #eee;
-  //       color: #010824;
-  //       display: grid;
-  //       grid-template-columns: repeat(2, 1fr);
-  //       text-align: center;
-  //       gap: 20px;
-  //       padding: 20px;
-  //       font-size: 1.2em;
-
-  //       div:nth-child(1),
-  //       div:nth-child(2) {
-  //         font-weight: bold;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 @keyframes shine {
@@ -161,7 +121,7 @@ section#home {
     .home-profile-img-wrapper {
       .home-profile-img-mask {
         img.home-profile-img {
-          max-height: 500px;
+          //max-height: 500px;
         }
       }
     }
@@ -200,8 +160,18 @@ section#home {
 @media screen and (max-width: 500px) {
   section#home {
     .content {
-      .name span {
-        font-size: 95px;
+      .name {
+        text-align: center;
+        span {
+          font-size: 95px;
+        }
+      }
+    }
+    .home-profile-img-wrapper {
+      .home-profile-img-mask {
+        img.home-profile-img {
+          max-height: 90vh;
+        }
       }
     }
   }
