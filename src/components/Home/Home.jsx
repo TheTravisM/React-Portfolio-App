@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './home.scss';
-import frontEndResume from '../../assets/docs/Travis-Mikolay-Resume.pdf';
-import reactResume from '../../assets/docs/Travis-Mikolay-Resume.pdf';
+import frontEndResume from '../../assets/docs/Engineer_Travis_M_Resume.pdf';
+import reactResume from '../../assets/docs/React-Travis-Mikolay-Resume.pdf';
 import uxResume from '../../assets/docs/UX_UI_Travis_M_Resume.pdf';
 import engineerResume from '../../assets/docs/Engineer_Travis_M_Resume.pdf';
 import ProfileImg from '../../assets/images/ProfilePic.jpg';
@@ -31,6 +31,10 @@ const Home = () => {
       case 'x':
         setResumeUrl(uxResume);
         setJobTitle('UX/UI Engineer');
+        break;
+      case 'e':
+        setResumeUrl(engineerResume);
+        setJobTitle('The Engineer');
         break;
       default:
         setResumeUrl(engineerResume);
