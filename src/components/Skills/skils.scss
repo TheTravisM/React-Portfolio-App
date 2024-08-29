@@ -52,12 +52,13 @@ section#skills {
       &:hover {
         background-color: #01082488;
         backdrop-filter: blur(75px);
-        border: 1px solid rgba(253, 0, 249,.25);
+        border: 1px solid lime;
         transform: scale(1.1);
 
         svg {
-          border: 1px solid rgba(253, 0, 249,.25);
+          border: 1px solid lime;
           transform: scale(1.1);
+          color: lime;
         }
       }
 
