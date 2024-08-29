@@ -39,7 +39,10 @@ const Projects = () => {
             className="projects-listItem"
             ref={(el) => el && divs.current.push(el)}
           >
-            <a href="value.url" className="image-wrapper">
+            <a href={value.url} 
+              className="image-wrapper"
+              target="_blank" 
+              rel="noopener noreferrer">
               <img src={value.images} alt="" />
             </a>
             <div className="content">
@@ -49,7 +52,10 @@ const Projects = () => {
               <div className="projects-listItem-description">
                 {value.des}
               </div>
-              <a href="value.url" className="project-link">
+              <a href={value.url} 
+                className="project-link"
+                target="_blank" 
+                rel="noopener noreferrer">
                 Link to project
               </a>
 
