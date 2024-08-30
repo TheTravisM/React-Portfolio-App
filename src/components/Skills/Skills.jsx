@@ -12,13 +12,13 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills" ref={scrollTab}>
-      <div 
-      className="title"
+      <h2 
+      className="title skills-title"
       ref={(el) => el && divs.current.push(el)}
     >
         A Particular Set of Skills
-      </div>
-      <div className="des" ref={(el) => el && divs.current.push(el)}>
+      </h2>
+      <div className="description skills-description" ref={(el) => el && divs.current.push(el)}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod corrupti, ab id eum exercitationem, dolores nesciunt ipsum sequi distinctio beatae doloribus at! Unde veritatis quod, sunt quisquam repellendus ex soluta.
       </div>
       <ul className="skills-list">

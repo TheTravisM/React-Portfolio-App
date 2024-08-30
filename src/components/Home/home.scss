@@ -28,8 +28,16 @@ section#home {
     .des {
       color: #eee5;
       margin: 30px 0;
-      border-left: .7em solid #e945e3;
+      border-color: #e945e3;
+      border-image: linear-gradient(#e945e3) 1;
+      border-width: 0 0 0 .7em;
+      border-style: solid;
       padding-left: 2em;
+      &:hover {
+        color: rgb(238, 238, 238);
+        animation: 5s rotate linear infinite;
+        border-image: linear-gradient(var(--angle), #11ffc3, #fd00f9) 1;
+      }
     }
 
     a.btn-download {

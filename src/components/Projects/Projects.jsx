@@ -23,7 +23,7 @@ const Projects = () => {
       </h2>
 
       <div 
-        className="project-description"
+        className="description project-description"
         ref={(el) => el && divs.current.push(el)}
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloribus

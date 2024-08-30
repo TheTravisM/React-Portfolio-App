@@ -12,12 +12,12 @@ const Contact = () => {
   return (
     <section id="contact" ref={scrollTab}>
       <h2 
-        className="contact-title" 
+        className="title contact-title" 
         ref={(el) => el && divs.current.push(el)}>
         My Contacts
       </h2>
       <div 
-        className="contact-description"  
+        className="description contact-description"  
         ref={(el) => el && divs.current.push(el)}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad architecto veritatis, illo voluptate commodi at dolorum quidem error recusandae, reprehenderit vero voluptates iure mollitia. Corporis, numquam. Nesciunt molestiae in eius!
       </div>
