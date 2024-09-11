@@ -1,12 +1,12 @@
-section#work {
-  .work-title {  }
+section#projects {
+  .project-title {  }
 
-  .work-description { }
+  .project-description { }
 
-  .work-list {
+  .projects-list {
     margin-top: 50px;
 
-    .work-listItem {
+    .projects-listItem {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       justify-content: space-between;
@@ -40,17 +40,17 @@ section#work {
       }
     }
     .content {
-      h3.work-listItem-title {
+      h3.projects-listItem-title {
         font-size: 3em;
         margin: 0;
       }
 
-      .work-listItem-description {
+      .projects-listItem-description {
         text-align: left;
         width: 100%;
       }
 
-      a.work-link {
+      a.project-link {
         color:#11ffc3;
         padding: 8px 0;
         display: flex;
@@ -77,7 +77,7 @@ section#work {
     }
   }
 
-  .work-listItem:nth-child(2n) {
+  .projects-listItem:nth-child(2n) {
     .image-wrapper {
       grid-column-start: 2;
       grid-column-end: 3;
@@ -92,20 +92,20 @@ section#work {
 }
 
 @media screen and (max-width: 767px) {
-  section#work {
-      .work-list {
-        .work-listItem {
+  section#projects {
+      .projects-list {
+        .projects-listItem {
           grid-template-columns: 1fr;
 
           .content {
-            h3.work-listItem-title {
+            h3.projects-listItem-title {
               font-size: 1.2em;
               margin-bottom: 1em;
             }
           }
         }
 
-        .work-listItem:nth-child(2n) {
+        .projects-listItem:nth-child(2n) {
           .content,
           .image-wrapper {
             grid-row-start: auto;

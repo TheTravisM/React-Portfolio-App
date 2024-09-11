@@ -1,37 +1,37 @@
 [
   {
     "name": "HTML",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
+    "des": "Hypertext Markup Language, is a coding language that defines the structure and meaning of content on a web page. It's the most fundamental building block of the web",
     "icon": "faHtml5"
   },
   {
     "name": "CSS",
-    "des": "Ad ad in cillum ut labore irure aliqua. Ex sit dolore ipsum id duis nostrud veniam. Nisi duis ut veniam ut eiusmod occaecat ullamco ullamco. Consequat eu sunt ut elit dolor sint magna magna velit ex. Excepteur occaecat reprehenderit tempor veniam.",
+    "des": "Cascading Style Sheets, a programming language used to style and structure web pages. CSS is a key technology for the World Wide Web",
     "icon": "faCss3"
   },
   {
     "name": "Javascript",
-    "des": "Sunt nostrud nulla qui cillum mollit aute anim anim aliqua aute magna tempor. Do culpa culpa excepteur officia ut eu deserunt proident sint non ut do magna minim. Sunt et excepteur tempor culpa irure non exercitation. Amet nostrud ex aute incididunt incididunt ipsum.",
+    "des": "Interpreted language that directly translates JS code into machine language code",
     "icon": "faJs"
   },
   {
     "name": "ReactJs",
-    "des": "Voluptate qui adipisicing dolore pariatur laboris deserunt consectetur reprehenderit. Esse dolor elit ullamco duis quis aliquip fugiat ipsum nisi est et. Nisi ut deserunt excepteur irure aliquip proident ",
+    "des": "JavaScript library that helps developers create interactive user interfaces (UIs) for web and mobile applications.  ",
     "icon": "faReact"
   },
   {
     "name": "VueJs",
-    "des": "Laborum commodo reprehenderit anim sunt est. Aliquip ipsum nisi incididunt enim ex id et sit sint magna. Deserunt minim ullamco aute veniam. Do irure nulla ut quis.",
+    "des": "Open source JavaScript framework that helps developers build user interfaces for web applications",
     "icon": "faVuejs"
   },
   {
     "name": "GitHub",
-    "des": "Ullamco incididunt adipisicing laboris ullamco ipsum quis nulla non. Non et irure amet in sint duis Lorem est eiusmod nisi. Aute dolor eiusmod esse et cupidatat ex minim do reprehenderit ut aute. In commodo do consectetur qui occaecat cupidatat sint ullamco dolor tempor ullamco elit.",
+    "des": "Web-based platform that allows users to store, share, and collaborate on code. It's a popular resource for programmers and is used by many companies and organizations to manage projects and collaborate.",
     "icon": "faGithub"
   },
   {
     "name": "Angular",
-    "des": "Ullamco incididunt adipisicing laboris ullamco ipsum quis nulla non. Non et irure amet in sint duis Lorem est eiusmod nisi. Aute dolor eiusmod esse et cupidatat ex minim do reprehenderit ut aute. In commodo do consectetur qui occaecat cupidatat sint ullamco dolor tempor ullamco elit.",
+    "des": "Open-source, JavaScript framework written in TypeScript to develop single-page applications.",
     "icon": "faAngular"
   }
 ]
