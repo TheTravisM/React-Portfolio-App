@@ -33,6 +33,7 @@ section#home {
       border-width: 0 0 0 .7em;
       border-style: solid;
       padding-left: 2em;
+      text-wrap: pretty;
       &:hover {
         color: rgb(238, 238, 238);
         animation: 5s rotate linear infinite;

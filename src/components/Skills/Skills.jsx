@@ -19,7 +19,7 @@ const Skills = () => {
         A Particular Set of Skills
       </h2>
       <div className="description skills-description" ref={(el) => el && divs.current.push(el)}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod corrupti, ab id eum exercitationem, dolores nesciunt ipsum sequi distinctio beatae doloribus at! Unde veritatis quod, sunt quisquam repellendus ex soluta.
+      I specialize in crafting responsive, accessible web experiences using modern technologies. With over 10 years of experience in frontend development, I focus on delivering clean, scalable code and collaborating across teams to build engaging, user-centric interfaces. Proficient in HTML, CSS, JavaScript, React, and other frameworks, I have a keen eye for design and usability.
       </div>
       <ul className="skills-list">
         {

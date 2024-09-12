@@ -26,10 +26,7 @@ const Work = () => {
         className="description work-description"
         ref={(el) => el && divs.current.push(el)}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloribus
-        quisquam quae dolor aspernatur quaerat cumque qui perferendis asperiores
-        rerum cum commodi deserunt ipsa natus earum nam, dicta dignissimos
-        perspiciatis?
+        My work portfolio includes a variety of challenging projects where I’ve applied my skills in frontend development, UX/UI design, and accessibility. From developing interactive dashboards to creating mobile-first applications, I take pride in delivering solutions that are not only visually appealing but also efficient and user-friendly.
       </div>
 
       <ul className="work-list">

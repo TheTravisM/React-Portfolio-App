@@ -94,6 +94,7 @@ body {
   background-image: linear-gradient(to right, transparent 0 49px, #eee1 49px),
     linear-gradient(to bottom, transparent 0 49px, #eee1 49px);
   background-size: 50px 50px;
+  text-wrap: pretty;
 
   &::before {
     position: fixed;
@@ -135,8 +136,9 @@ section {
   }
   .description {
     color: rgba(238, 238, 238, 0.33);
-    text-align: center;
-    max-width: 500px;
+    text-align: justify;
+    text-wrap: pretty;
+    max-width: 600px;
     margin: auto;
     &:hover {
       color: rgba(238, 238, 238, 0.75);

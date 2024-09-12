@@ -19,7 +19,7 @@ const Contact = () => {
       <div 
         className="description contact-description"  
         ref={(el) => el && divs.current.push(el)}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad architecto veritatis, illo voluptate commodi at dolorum quidem error recusandae, reprehenderit vero voluptates iure mollitia. Corporis, numquam. Nesciunt molestiae in eius!
+        Feel free to reach out for collaborations, freelance opportunities, or to learn more about my work.
       </div>
       <ul 
         className="contact-list"  

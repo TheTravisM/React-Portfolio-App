@@ -26,10 +26,7 @@ const Projects = () => {
         className="description project-description"
         ref={(el) => el && divs.current.push(el)}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloribus
-        quisquam quae dolor aspernatur quaerat cumque qui perferendis asperiores
-        rerum cum commodi deserunt ipsa natus earum nam, dicta dignissimos
-        perspiciatis?
+        These projects demonstrate my ability to build innovative solutions and explore new technologies. From crafting a GIF generator to creating a course directory app, each project reflects my dedication to solving challenges with clean, efficient code and a focus on user experience.
       </div>
 
       <ul className="projects-list">
