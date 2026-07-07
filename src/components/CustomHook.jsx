@@ -1,38 +1,43 @@
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-const CustomHook = (refTab = null, refList = null) => {
-  const scrollTab = refTab;
-  const divs = refList;
-  const activeTab = useSelector(state => state.activeTab);
+const useScrollAnimation = (refList = null) => {
+  const activeTab = useSelector((state) => state.activeTab);
+
   useEffect(() => {
+    const items = Array.isArray(refList?.current)
+      ? Array.from(new Set(refList.current))
+      : [];
 
-    const element = document.getElementById(activeTab);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    if(divs !== null){
-      divs.current.forEach((div) => {
-        div.classList.add('animation');
-      }) 
-
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        divs.current.forEach((div) => {
-          const offsetTop = div.getBoundingClientRect().top 
-          + scrollPosition;
-          if(scrollPosition >= offsetTop 
-            - (window.innerHeight / 4 * 3)){
-              div.classList.add('active');
-            } else {
-              div.classList.remove('active');
-            }
-        })
+    if (typeof document !== 'undefined' && activeTab) {
+      const activeElement = document.getElementById(activeTab);
+      if (activeElement) {
+        activeElement.scrollIntoView({ behavior: 'smooth' });
       }
-      window.addEventListener('scroll', handleScroll);
     }
-  }, [activeTab])
-}
 
-export default CustomHook
+    if (items.length === 0 || typeof window === 'undefined') {
+      return;
+    }
+
+    items.forEach((div) => div.classList.add('animation'));
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      items.forEach((div) => {
+        const offsetTop = div.getBoundingClientRect().top + scrollPosition;
+        const isActive = scrollPosition >= offsetTop - window.innerHeight * 0.75;
+        div.classList.toggle('active', isActive);
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [activeTab, refList]);
+};
+
+export default useScrollAnimation

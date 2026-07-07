@@ -1,58 +1,38 @@
-import React, { useRef } from 'react' 
-import "./projects.scss";
-import projectsData from "./projects.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useRef } from 'react';
+import './projects.scss';
+import projectsData from './projects.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPersonCircleQuestion,
   faEarthAmericas,
-} from "@fortawesome/free-solid-svg-icons";
-import CustomHook from '../CustomHook';
+} from '@fortawesome/free-solid-svg-icons';
+import useScrollAnimation from '../CustomHook';
 
 const Projects = () => {
   const divs = useRef([]);
   const scrollTab = useRef();
-  CustomHook(scrollTab, divs);
+  useScrollAnimation(divs);
 
   return (
     <section id="projects" ref={scrollTab}>
-      <h2 
-        className="title project-title"
-        ref={(el) => el && divs.current.push(el)}
-      >
+      <h2 className="title project-title" ref={(el) => el && divs.current.push(el)}>
         My Projects
       </h2>
 
-      <div 
-        className="description project-description"
-        ref={(el) => el && divs.current.push(el)}
-      >
+      <div className="description project-description" ref={(el) => el && divs.current.push(el)}>
         These projects demonstrate my ability to build innovative solutions and explore new technologies. From crafting a GIF generator to creating a course directory app, each project reflects my dedication to solving challenges with clean, efficient code and a focus on user experience.
       </div>
 
       <ul className="projects-list">
         {projectsData.map((value, key) => (
-          <li 
-            key={key} 
-            className="projects-listItem"
-            ref={(el) => el && divs.current.push(el)}
-          >
-            <a href={value.url} 
-              className="image-wrapper"
-              target="_blank" 
-              rel="noopener noreferrer">
-              <img src={value.images} alt="" />
+          <li key={key} className="projects-listItem" ref={(el) => el && divs.current.push(el)}>
+            <a href={value.url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
+              <img src={value.images} alt={value.name || 'Project screenshot'} />
             </a>
             <div className="content">
-              <h3 className="projects-listItem-title">
-                {value.name}
-              </h3>
-              <div className="projects-listItem-description">
-                {value.des}
-              </div>
-              <a href={value.url} 
-                className="project-link"
-                target="_blank" 
-                rel="noopener noreferrer">
+              <h3 className="projects-listItem-title">{value.name}</h3>
+              <div className="projects-listItem-description">{value.des}</div>
+              <a href={value.url} className="project-link" target="_blank" rel="noopener noreferrer">
                 Link to project
               </a>
 
@@ -62,9 +42,7 @@ const Projects = () => {
                 </div>
                 <div>
                   <h4>Mission</h4>
-                  <div className="misson-description">
-                    {value.mission}
-                  </div>
+                  <div className="misson-description">{value.mission}</div>
                 </div>
               </div>
 
@@ -74,9 +52,7 @@ const Projects = () => {
                 </div>
                 <div>
                   <h4>Techology</h4>
-                  <div className="misson-description">
-                    {value.technology}
-                  </div>
+                  <div className="misson-description">{value.technology}</div>
                 </div>
               </div>
             </div>
