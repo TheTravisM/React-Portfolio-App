@@ -22,20 +22,57 @@ const useScrollAnimation = (refList = null) => {
 
     items.forEach((div) => div.classList.add('animation'));
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      items.forEach((div) => {
-        const offsetTop = div.getBoundingClientRect().top + scrollPosition;
-        const isActive = scrollPosition >= offsetTop - window.innerHeight * 0.75;
-        div.classList.toggle('active', isActive);
-      });
-    };
+    // Use IntersectionObserver to detect when items enter the viewport.
+    // This avoids layout thrashing caused by repeatedly calling
+    // getBoundingClientRect inside a scroll handler.
+    let observer;
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            // Toggle the `active` class when the element intersects the viewport
+            entry.target.classList.toggle('active', entry.isIntersecting);
+          });
+        },
+        {
+          root: null,
+          // Trigger when element is within ~75% of the viewport height
+          rootMargin: '0px 0px -25% 0px',
+          threshold: 0,
+        }
+      );
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+      items.forEach((div) => observer.observe(div));
+    } else {
+      // Fallback: batch reads/writes and use requestAnimationFrame to avoid forced reflow
+      let ticking = false;
+      const handleScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const scrollPosition = window.scrollY;
+          items.forEach((div) => {
+            const rectTop = div.getBoundingClientRect().top + scrollPosition;
+            const isActive = scrollPosition >= rectTop - window.innerHeight * 0.75;
+            div.classList.toggle('active', isActive);
+          });
+          ticking = false;
+        });
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      // cleanup will remove the listener below
+      observer = {
+        disconnect() {
+          window.removeEventListener('scroll', handleScroll);
+        },
+      };
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (observer && typeof observer.disconnect === 'function') observer.disconnect();
     };
   }, [activeTab, refList]);
 };
