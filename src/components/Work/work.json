@@ -5,6 +5,8 @@
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
     "images": "img/cenage-ui-style-guide.jpg",
+    "webp": "img/webp/cenage-ui-style-guide.webp",
+    "avif": "img/avif/cenage-ui-style-guide.avif",
     "url": "https://cengage-ui-style-guide.vercel.app"
   },
   {
@@ -13,6 +15,8 @@
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
     "images": "img/oracle-workbench.jpg",
+    "webp": "img/webp/oracle-workbench.webp",
+    "avif": "img/avif/oracle-workbench.avif",
     "url": "https://oracle-workbench.vercel.app"
   },
   {
@@ -21,6 +25,8 @@
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
     "images": "img/healthcare-dashboard.jpg",
+    "webp": "img/webp/healthcare-dashboard.webp",
+    "avif": "img/avif/healthcare-dashboard.avif",
     "url": "https://cross-chx-functional-ui.vercel.app"
   }
 ]
