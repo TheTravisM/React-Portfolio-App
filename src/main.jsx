@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux';
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
     <Router>
     <Provider store={store}>
       <App />
+      <Analytics />
     </Provider>
     </Router>
   </StrictMode>,
