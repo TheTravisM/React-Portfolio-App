@@ -80,7 +80,9 @@ const Home = () => {
             src={ProfileImg}
             className="home-profile-img"
             alt={PROFILE_ALT}
-            loading="lazy"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             onError={handleImageError}
           />
         </div>

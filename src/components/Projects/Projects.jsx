@@ -27,7 +27,16 @@ const Projects = () => {
         {projectsData.map((value, key) => (
           <li key={key} className="projects-listItem" ref={(el) => el && divs.current.push(el)}>
             <a href={value.url} className="image-wrapper" target="_blank" rel="noopener noreferrer">
-              <img src={value.images} alt={value.name || 'Project screenshot'} />
+              <picture>
+                {value.avif && <source srcSet={value.avif} type="image/avif" />}
+                {value.webp && <source srcSet={value.webp} type="image/webp" />}
+                <img
+                  src={value.images}
+                  alt={value.name || 'Project screenshot'}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </a>
             <div className="content">
               <h3 className="projects-listItem-title">{value.name}</h3>
