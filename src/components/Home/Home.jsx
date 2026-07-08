@@ -5,7 +5,6 @@ import frontEndResume from '../../assets/docs/Engineer_Travis_Mikolay_Resume.pdf
 import reactResume from '../../assets/docs/React_Travis_Mikolay_Resume.pdf';
 import uxResume from '../../assets/docs/UX_UI_Travis_Mikolay_Resume.pdf';
 import engineerResume from '../../assets/docs/Engineer_Travis_Mikolay_Resume.pdf';
-import ProfileImg from '../../assets/images/ProfilePic.jpg';
 import useScrollAnimation from '../CustomHook';
 
 const defaultProfile = {
@@ -76,15 +75,19 @@ const Home = () => {
       </div>
       <div className="home-profile-img-wrapper">
         <div className="home-profile-img-mask">
-          <img
-            src={ProfileImg}
-            className="home-profile-img"
-            alt={PROFILE_ALT}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            onError={handleImageError}
-          />
+          <picture>
+            <source srcSet="/img/avif/ProfilePic.avif" type="image/avif" />
+            <source srcSet="/img/webp/ProfilePic.webp" type="image/webp" />
+            <img
+              src="/img/ProfilePic.jpg"
+              className="home-profile-img"
+              alt={PROFILE_ALT}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              onError={handleImageError}
+            />
+          </picture>
         </div>
       </div>
     </section>
