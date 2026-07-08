@@ -72,4 +72,7 @@ export default defineConfig({
     }),
     preloadFonts(),
   ],
+  build: {
+    sourcemap: true,
+  },
 })
