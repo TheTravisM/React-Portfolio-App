@@ -1,25 +1,25 @@
 [
   {
     "name": "Cengage UI Style Guide",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
-    "mission": "Back-end Developer, system analysis and design",
-    "technology": "HTML5, CSS3, React JS, SockerIO,...",
+    "des": "A customized Bootstrap-based web style guide and living documentation site for Cengage Learning. It establishes front-end standards including a responsive 12-column grid, typography, forms, navigation components, breadcrumbs, tabbed interfaces, and integrated video players, enabling consistent and accessible development across Cengage's educational platforms.",
+    "mission": "Front-end Developer, UI system analysis and responsive component design",
+    "technology": "HTML5, CSS3, LESS, Bootstrap, JavaScript, jQuery, Font Awesome, Responsive Design",
     "imageBase": "cenage-ui-style-guide",
     "url": "https://cengage-ui-style-guide.vercel.app"
   },
   {
     "name": "Oracle Workbench",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
-    "mission": "Back-end Developer, system analysis and design",
-    "technology": "HTML5, CSS3, React JS, SockerIO,...",
+    "des": "An interactive documentation and management workbench for Oracle-based content cartridge and template systems used across educational publishing platforms. Built as a multi-client AngularJS single-page application, it provides searchable and filterable lists of cartridges, detailed views showing templates, sections, editable fields, and descriptions, plus image galleries and modal previews for National Geographic, Cengage, and Nelson projects.",
+    "mission": "Front-end Developer, AngularJS application development, UI system analysis and interactive documentation dashboard design",
+    "technology": "HTML5, CSS3, JavaScript, AngularJS, Bootstrap, ngRoute, ngResource, jQuery, Responsive Design",
     "imageBase": "oracle-workbench",
     "url": "https://oracle-workbench.vercel.app"
   },
   {
     "name": "Cross CHX Dashboard",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
-    "mission": "Back-end Developer, system analysis and design",
-    "technology": "HTML5, CSS3, React JS, SockerIO,...",
+    "des": "An interactive healthcare analytics dashboard for cardiology and cardiac surgery at Oxford General Medical Center. Built as an AngularJS single-page application, it features D3.js visualizations for patient visits, insurance breakdowns, and demographic maps, along with searchable lists and detailed profiles for physicians and patients, plus dedicated views for activity, complaints, diagnoses, and medications.",
+    "mission": "Front-end Developer, AngularJS application development, D3 data visualization, and healthcare dashboard UI design",
+    "technology": "HTML5, CSS3, JavaScript, AngularJS, D3.js, ngRoute, ngResource, Polymer, Google Maps, Material Icons, Responsive Design",
     "imageBase": "healthcare-dashboard",
     "url": "https://cross-chx-functional-ui.vercel.app"
   }
