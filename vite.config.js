@@ -75,7 +75,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     // Do not modulepreload icon chunks on first paint; they only power
-    // below-the-fold sections that are already code-split with React.lazy.
+    // below-the-fold sections that are already code-split with React.lazy..
     modulePreload: {
       resolveDependencies(filename, deps) {
         return deps.filter((dep) => !dep.includes('icons-'));
