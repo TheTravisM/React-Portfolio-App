@@ -55,6 +55,23 @@ function preloadFonts() {
   }
 }
 
+// Cloudflare Rocket Loader rewrites type="module" and breaks Vite/React ES modules.
+// data-cfasync="false" tells Rocket Loader to leave these scripts alone.
+function disableCloudflareRocketLoader() {
+  return {
+    name: 'disable-cloudflare-rocket-loader',
+    transformIndexHtml: {
+      order: 'post',
+      handler(html) {
+        return html.replace(
+          /<script(?![^>]*\bdata-cfasync=)([^>]*)>/gi,
+          '<script data-cfasync="false"$1>',
+        )
+      },
+    },
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -71,6 +88,7 @@ export default defineConfig({
       minifyCss: true,
     }),
     preloadFonts(),
+    disableCloudflareRocketLoader(),
   ],
   build: {
     sourcemap: true,
