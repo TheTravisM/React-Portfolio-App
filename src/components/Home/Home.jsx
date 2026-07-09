@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import './home.scss';
 import useScrollAnimation from '../CustomHook';
 import ResponsiveImage from '../ResponsiveImage';
@@ -44,13 +43,20 @@ const resumeProfiles = {
 
 const PROFILE_ALT = 'Photo of Travis Mikolay';
 
+function getProfileKeyFromUrl() {
+  if (typeof window === 'undefined') return '';
+  try {
+    return new URLSearchParams(window.location.search).get('x')?.toLowerCase() || '';
+  } catch {
+    return '';
+  }
+}
+
 const Home = () => {
   const scrollTab = useRef();
   useScrollAnimation();
 
-  const [searchParams] = useSearchParams();
-  const rawQuery = searchParams?.get('x');
-  const selectedTitle = typeof rawQuery === 'string' ? rawQuery.toLowerCase() : '';
+  const selectedTitle = getProfileKeyFromUrl();
   const profile = resumeProfiles[selectedTitle] ?? defaultProfile;
   const { resumeKey, jobTitle, description } = profile;
   const downloadAriaLabel = `Download ${jobTitle} resume`;

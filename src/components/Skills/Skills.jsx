@@ -1,9 +1,27 @@
 import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as Icons from '@fortawesome/free-brands-svg-icons';
+import {
+  faHtml5,
+  faCss3,
+  faJs,
+  faReact,
+  faVuejs,
+  faGithub,
+  faAngular,
+} from '@fortawesome/free-brands-svg-icons';
 import './skils.scss';
 import skillsData from './skills.json';
 import useScrollAnimation from '../CustomHook';
+
+const brandIcons = {
+  faHtml5,
+  faCss3,
+  faJs,
+  faReact,
+  faVuejs,
+  faGithub,
+  faAngular,
+};
 
 const Skills = () => {
   const divs = useRef([]);
@@ -21,7 +39,7 @@ const Skills = () => {
       <ul className="skills-list">
         {skillsData.map((value, key) => (
           <li key={key} className="skills-listItem" ref={(el) => el && divs.current.push(el)}>
-            <FontAwesomeIcon icon={Icons[value.icon]} />
+            <FontAwesomeIcon icon={brandIcons[value.icon]} />
             <h3 className="skills-listItem-title">{value.name}</h3>
             <div className="skills-listItem-description">{value.des}</div>
           </li>
