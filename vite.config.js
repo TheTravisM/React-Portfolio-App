@@ -92,19 +92,20 @@ export default defineConfig({
   ],
   build: {
     sourcemap: true,
-    // Do not modulepreload icon chunks on first paint; they only power
-    // below-the-fold sections that are already code-split with React.lazy..
-    modulePreload: {
-      resolveDependencies(filename, deps) {
-        return deps.filter((dep) => !dep.includes('icons-'));
-      },
-    },
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('@fortawesome')) return 'icons';
-            if (id.includes('react-dom') || id.includes('/react/')) return 'react-vendor';
+          // Keep React isolated. Do NOT put @fortawesome in a separate chunk:
+          // react-fontawesome imports React, and a shared icons chunk created a
+          // circular dependency (TDZ: Cannot access 'we' before initialization)
+          // that left #root empty in production.
+          const normalized = id.replace(/\\/g, '/')
+          if (
+            normalized.includes('node_modules/react-dom') ||
+            normalized.includes('node_modules/react/') ||
+            normalized.includes('node_modules/scheduler')
+          ) {
+            return 'react-vendor'
           }
         },
       },
