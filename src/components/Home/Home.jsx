@@ -1,14 +1,20 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './home.scss';
-import frontEndResume from '../../assets/docs/Engineer_Travis_Mikolay_Resume.pdf';
-import reactResume from '../../assets/docs/React_Travis_Mikolay_Resume.pdf';
-import uxResume from '../../assets/docs/UX_UI_Travis_Mikolay_Resume.pdf';
-import engineerResume from '../../assets/docs/Engineer_Travis_Mikolay_Resume.pdf';
 import useScrollAnimation from '../CustomHook';
+import ResponsiveImage from '../ResponsiveImage';
+import { HERO_IMAGE } from '../../utils/images';
+
+// Resume modules are loaded on demand so only the selected PDF is shipped.
+const resumeLoaders = {
+  f: () => import('../../assets/docs/Engineer_Travis_Mikolay_Resume.pdf'),
+  r: () => import('../../assets/docs/React_Travis_Mikolay_Resume.pdf'),
+  x: () => import('../../assets/docs/UX_UI_Travis_Mikolay_Resume.pdf'),
+  e: () => import('../../assets/docs/Engineer_Travis_Mikolay_Resume.pdf'),
+};
 
 const defaultProfile = {
-  resumeUrl: engineerResume,
+  resumeKey: 'e',
   jobTitle: 'The Engineer',
   description:
     'Engineer with 10+ years of experience in crafting mobile-first, interactive websites and applications. Skilled in leading projects, collaborating with teams, and creating visually appealing, user-centric designs. Expert in web accessibility and responsive design, delivering high-quality solutions that meet client and company needs across devices.',
@@ -16,19 +22,19 @@ const defaultProfile = {
 
 const resumeProfiles = {
   f: {
-    resumeUrl: frontEndResume,
+    resumeKey: 'f',
     jobTitle: 'Front End Engineer',
     description:
       'Front-End Engineer with 10+ years of experience in developing responsive, mobile-first websites and applications. Proficient in HTML, CSS, JavaScript, and modern frameworks, creating intuitive, user-centric interfaces. Skilled in collaborating with cross-functional teams, optimizing performance, and ensuring web accessibility, consistently delivering high-quality solutions that enhance user experiences and meet business goals.',
   },
   r: {
-    resumeUrl: reactResume,
+    resumeKey: 'r',
     jobTitle: 'React Engineer',
     description:
       'React Engineer with 10+ years of experience in front-end development, focused on creating interactive, mobile-first websites and applications. Expert in React, JavaScript, and modern front-end tools, delivering seamless, user-friendly interfaces. Skilled in integrating with backend systems and adhering to web accessibility standards, consistently providing high-quality, performant solutions.',
   },
   x: {
-    resumeUrl: uxResume,
+    resumeKey: 'x',
     jobTitle: 'UX/UI Engineer',
     description:
       'UI/UX Engineer with 10+ years of experience in crafting mobile-first, interactive websites and applications. Skilled in leading projects, collaborating with teams, and creating visually appealing, user-centric designs. Expert in web accessibility and responsive design, delivering high-quality solutions that meet client and company needs across devices.',
@@ -46,8 +52,34 @@ const Home = () => {
   const rawQuery = searchParams?.get('x');
   const selectedTitle = typeof rawQuery === 'string' ? rawQuery.toLowerCase() : '';
   const profile = resumeProfiles[selectedTitle] ?? defaultProfile;
-  const { resumeUrl, jobTitle, description } = profile;
+  const { resumeKey, jobTitle, description } = profile;
   const downloadAriaLabel = `Download ${jobTitle} resume`;
+
+  const [resumeUrl, setResumeUrl] = useState('');
+  const [resumeStatus, setResumeStatus] = useState('loading');
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadResume = resumeLoaders[resumeKey] ?? resumeLoaders.e;
+
+    setResumeStatus('loading');
+    setResumeUrl('');
+
+    loadResume()
+      .then((mod) => {
+        if (cancelled) return;
+        setResumeUrl(mod.default);
+        setResumeStatus('ready');
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setResumeStatus('error');
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [resumeKey]);
 
   const handleImageError = (event) => {
     event.currentTarget.onerror = null;
@@ -65,33 +97,40 @@ const Home = () => {
         <p className="des">{description}</p>
         <a
           className="btn-download"
-          href={resumeUrl}
+          href={resumeUrl || undefined}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={downloadAriaLabel}
+          aria-disabled={resumeStatus !== 'ready'}
+          onClick={(event) => {
+            if (resumeStatus !== 'ready' || !resumeUrl) {
+              event.preventDefault();
+            }
+          }}
         >
-          Download My Resume
+          {resumeStatus === 'loading' ? 'Preparing Resume…' : 'Download My Resume'}
         </a>
       </div>
       <div className="home-profile-img-wrapper">
         <div className="home-profile-img-mask">
-          <picture>
-            <source srcSet="/img/avif/ProfilePic.avif" type="image/avif" />
-            <source srcSet="/img/webp/ProfilePic.webp" type="image/webp" />
-            <img
-              src="/img/ProfilePic.jpg"
-              className="home-profile-img"
-              alt={PROFILE_ALT}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              onError={handleImageError}
-            />
-          </picture>
+          <ResponsiveImage
+            avifSrcSet={HERO_IMAGE.avifSrcSet}
+            webpSrcSet={HERO_IMAGE.webpSrcSet}
+            src={HERO_IMAGE.fallbackSrc}
+            className="home-profile-img"
+            alt={PROFILE_ALT}
+            width={HERO_IMAGE.width}
+            height={HERO_IMAGE.height}
+            sizes={HERO_IMAGE.sizes}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            onError={handleImageError}
+          />
         </div>
       </div>
     </section>
   );
 };
 
-export default Home
+export default Home;

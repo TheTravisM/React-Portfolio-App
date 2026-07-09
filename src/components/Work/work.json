@@ -4,9 +4,7 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/cenage-ui-style-guide.jpg",
-    "webp": "img/webp/cenage-ui-style-guide.webp",
-    "avif": "img/avif/cenage-ui-style-guide.avif",
+    "imageBase": "cenage-ui-style-guide",
     "url": "https://cengage-ui-style-guide.vercel.app"
   },
   {
@@ -14,9 +12,7 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/oracle-workbench.jpg",
-    "webp": "img/webp/oracle-workbench.webp",
-    "avif": "img/avif/oracle-workbench.avif",
+    "imageBase": "oracle-workbench",
     "url": "https://oracle-workbench.vercel.app"
   },
   {
@@ -24,9 +20,7 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/healthcare-dashboard.jpg",
-    "webp": "img/webp/healthcare-dashboard.webp",
-    "avif": "img/avif/healthcare-dashboard.avif",
+    "imageBase": "healthcare-dashboard",
     "url": "https://cross-chx-functional-ui.vercel.app"
   }
 ]

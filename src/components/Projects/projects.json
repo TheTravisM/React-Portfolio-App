@@ -4,9 +4,7 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/directory-app.jpg",
-    "webp":"img/webp/directory-app.webp",
-    "avif":"img/avif/directory-app.avif",
+    "imageBase": "directory-app",
     "url": "https://coursedirectory-travis-mikolays-projects.vercel.app"
   },
   {
@@ -14,9 +12,7 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/gif-search.jpg",
-    "webp":"img/webp/gif-search.webp",
-    "avif":"img/avif/gif-search.avif",
+    "imageBase": "gif-search",
     "url": "https://gif-search-app-one.vercel.app"
   },
   {
@@ -24,9 +20,7 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/arya-list.jpg",
-    "webp":"img/webp/arya-list.webp",
-    "avif":"img/avif/arya-list.avif",
+    "imageBase": "arya-list",
     "url": "https://aryastarkslistofnames-travis-mikolays-projects.vercel.app"
   },
   {
@@ -34,9 +28,7 @@
     "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
     "mission": "Back-end Developer, system analysis and design",
     "technology": "HTML5, CSS3, React JS, SockerIO,...",
-    "images": "img/wedding-site.jpg",
-    "webp":"img/webp/wedding-site.webp",
-    "avif":"img/avif/wedding-site.avif",
+    "imageBase": "wedding-site",
     "url": "https://thetravism.github.io/Ang-Wedding-App/"
   }
 ]

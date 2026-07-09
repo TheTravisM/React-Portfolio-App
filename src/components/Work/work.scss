@@ -28,7 +28,13 @@ section#projects {
           }
         }
         img {
-          height: 400px;
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          max-height: 400px;
+          aspect-ratio: 1024 / 768;
+          object-fit: cover;
           border-radius: 10px;
           box-shadow: 0 20px 40px #010824;
           transition: all 1s linear;

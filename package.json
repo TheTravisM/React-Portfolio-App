@@ -10,7 +10,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "optimize:resumes": "python scripts/compress-resumes.py"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
