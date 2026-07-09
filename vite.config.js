@@ -15,7 +15,7 @@ function preloadFonts() {
         }
 
         const css = typeof file.source === 'string' ? file.source : file.source.toString()
-        const matches = css.matchAll(/url\((['"]?)([^)'\"]+)\1\)/gi)
+        const matches = css.matchAll(/url\((['"]?)([^)'"]+)\1\)/gi)
 
         for (const match of matches) {
           const href = match[2].trim()

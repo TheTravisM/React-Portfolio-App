@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import './projects.scss';
 import projectsData from './projects.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

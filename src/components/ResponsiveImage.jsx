@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Responsive picture element that prefers AVIF, then WebP.
  * The <img src> also points at a modern format so the large JPEG is not used

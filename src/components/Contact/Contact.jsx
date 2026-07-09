@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import contactData from './contact.json';
 import './contact.scss';
 import useScrollAnimation from '../CustomHook';

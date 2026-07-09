@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './home.scss';
 import useScrollAnimation from '../CustomHook';
 import ResponsiveImage from '../ResponsiveImage';
@@ -41,7 +41,7 @@ const resumeProfiles = {
   e: defaultProfile,
 };
 
-const PROFILE_ALT = 'Photo of Travis Mikolay';
+const PROFILE_ALT = 'Travis Mikolay';
 
 function getProfileKeyFromUrl() {
   if (typeof window === 'undefined') return '';
@@ -89,7 +89,7 @@ const Home = () => {
 
   const handleImageError = (event) => {
     event.currentTarget.onerror = null;
-    event.currentTarget.alt = 'Profile image unavailable';
+    event.currentTarget.alt = 'Travis Mikolay portrait unavailable';
   };
 
   return (
