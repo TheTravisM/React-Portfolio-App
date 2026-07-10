@@ -1,33 +1,41 @@
 [
+    {
+    "name": "Professional Portfolio",
+    "des": "A comprehensive professional portfolio engineered as a modern React web application. It serves as a central hub for showcasing front-end architecture projects, interactive design systems, and technical case studies, utilizing modular components and responsive design to deliver an optimized user experience across devices.",
+    "mission": "Architect a scalable, high-performance personal platform to effectively communicate complex engineering capabilities, design system expertise, and professional achievements.",
+    "technology": "React.js, JavaScript (ES6+), HTML5, CSS3",
+    "imageBase": "professional-portfolio",
+    "url": "https://travismportfolio-travis-mikolays-projects.vercel.app/"
+  },
   {
     "name": "Course Directory",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
-    "mission": "Back-end Developer, system analysis and design",
-    "technology": "HTML5, CSS3, React JS, SockerIO,...",
+    "des": "A modular, data-driven course management application built to demonstrate advanced React routing and state management patterns. It features a dynamic directory interface that allows users to navigate, filter, and access detailed course information, highlighting effective component composition and clean, maintainable code architecture.",
+    "mission": "Develop a performant, scalable directory interface utilizing modern React patterns to streamline content discovery and user navigation.",
+    "technology": "React.js, React Router, JavaScript (ES6+), CSS3, HTML5",
     "imageBase": "directory-app",
     "url": "https://coursedirectory-travis-mikolays-projects.vercel.app"
   },
   {
     "name": "Gif Generator App",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
-    "mission": "Back-end Developer, system analysis and design",
-    "technology": "HTML5, CSS3, React JS, SockerIO,...",
+    "des": "An interactive GIF discovery application powered by the Giphy API. Users can search for and browse animated GIFs through a responsive grid interface, demonstrating real-time API integration, efficient rendering of media assets, and a clean, engaging user experience.",
+    "mission": "Build a fast, delightful GIF search experience that showcases API consumption, responsive media handling, and intuitive search UX in a React application.",
+    "technology": "React.js, JavaScript (ES6+), Giphy API, HTML5, CSS3",
     "imageBase": "gif-search",
     "url": "https://gif-search-app-one.vercel.app"
   },
   {
     "name": "Arya's List Of Names",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
-    "mission": "Back-end Developer, system analysis and design",
-    "technology": "HTML5, CSS3, React JS, SockerIO,...",
+    "des": "A Game of Thrones themed interactive scoring application built with React. Users can add names to Arya's list, increment kill counts for characters, and track a running total score alongside a built-in stopwatch for timed challenges, demonstrating state management, dynamic list rendering, and playful UI interactions.",
+    "mission": "Create an engaging, thematic React application that demonstrates component state, list manipulation, and real-time score tracking in a fun, recognizable context.",
+    "technology": "React.js, JavaScript (ES6+), HTML5, CSS3",
     "imageBase": "arya-list",
     "url": "https://aryastarkslistofnames-travis-mikolays-projects.vercel.app"
   },
   {
     "name": "Wedding",
-    "des": "Eu voluptate sit do labore consectetur in ad esse qui laborum ad eiusmod. Esse ea velit culpa exercitation anim enim reprehenderit. Fugiat nostrud non dolore aliquip quis in ea amet duis.",
-    "mission": "Back-end Developer, system analysis and design",
-    "technology": "HTML5, CSS3, React JS, SockerIO,...",
+    "des": "A fully-featured Angular wedding website for a 2018 Cincinnati wedding, featuring an elegant multi-section layout with Our Story, Wedding Party, Location details with embedded maps, Registry links, RSVP form integration, Hotel booking information, a live countdown timer, and a parallax-enhanced footer. The site demonstrates component architecture, lazy-loaded imagery, and polished visual storytelling.",
+    "mission": "Design and develop a beautiful, informative wedding website that guides guests through the event details while showcasing front-end craftsmanship with Angular, SCSS, and interactive effects.",
+    "technology": "Angular, TypeScript, SCSS, Bootstrap, Lazy Loading, Parallax.js, HTML5",
     "imageBase": "wedding-site",
     "url": "https://thetravism.github.io/Ang-Wedding-App/"
   }
