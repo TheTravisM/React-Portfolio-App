@@ -1,4 +1,12 @@
 [
+    {
+    "name": "Cengage Group",
+    "des": "A modern, responsive web application engineered to enhance the digital presence of Cengage Group. Built with a focus on robust component architecture and intuitive UI/UX, the interface ensures dynamic content rendering and a cohesive design language that aligns with enterprise branding standards across all devices.",
+    "mission": "Architect a scalable, high-performance user interface utilizing modern JavaScript frameworks to deliver an accessible and engaging digital experience for users.",
+    "technology": "HTML5, CSS3, JavaScript, React, Vercel, Responsive Design",
+    "imageBase": "cengage-group",
+    "url": "https://cengage-group.vercel.app/"
+  },
   {
     "name": "Cengage UI Style Guide",
     "des": "A foundational design system and living documentation platform for Cengage Learning. Built on a customized Bootstrap framework, it standardizes responsive layouts, typography, and interactive UI components to enforce accessible, cohesive development across enterprise educational platforms.",
