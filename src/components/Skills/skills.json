@@ -1,37 +1,57 @@
 [
   {
-    "name": "HTML",
-    "des": "Hypertext Markup Language, is a coding language that defines the structure and meaning of content on a web page. It's the most fundamental building block of the web",
+    "name": "HTML5",
+    "des": "Architecting semantic, accessible, and SEO-optimized DOM structures. Essential for building resilient web applications and ensuring strict WCAG compliance across enterprise platforms.",
     "icon": "faHtml5"
   },
   {
     "name": "CSS",
-    "des": "Cascading Style Sheets, a programming language used to style and structure web pages. CSS is a key technology for the World Wide Web",
+    "des": "Advanced layout orchestration utilizing Grid, Flexbox, and custom properties. Foundational for building scalable, maintainable design systems and responsive component architectures.",
     "icon": "faCss3"
   },
   {
     "name": "Javascript",
-    "des": "Interpreted language that directly translates JS code into machine language code",
+    "des": "Core application logic utilizing modern, asynchronous paradigms. Focused on performance optimization, memory management, and robust client-side architecture.",
     "icon": "faJs"
   },
   {
     "name": "ReactJs",
-    "des": "JavaScript library that helps developers create interactive user interfaces (UIs) for web and mobile applications.  ",
+    "des": "Architecting highly modular, reusable UI component libraries. Utilizing advanced patterns, hooks, and context for predictable state management in complex, scalable applications.",
     "icon": "faReact"
   },
   {
     "name": "VueJs",
-    "des": "Open source JavaScript framework that helps developers build user interfaces for web applications",
+    "des": "Designing reactive, progressively integrated user interfaces. Leveraging the Composition API for encapsulated, maintainable frontend logic and seamless application scaling.",
     "icon": "faVuejs"
   },
   {
     "name": "GitHub",
-    "des": "Web-based platform that allows users to store, share, and collaborate on code. It's a popular resource for programmers and is used by many companies and organizations to manage projects and collaborate.",
+    "des": "Managing enterprise version control and branching strategies. Driving rigorous code reviews, agile collaboration, and CI/CD pipeline integration for reliable software delivery.",
     "icon": "faGithub"
   },
   {
     "name": "Angular",
-    "des": "Open-source, JavaScript framework written in TypeScript to develop single-page applications.",
+    "des": "Engineering enterprise-scale single-page applications. Utilizing TypeScript, RxJS, and dependency injection to build modular, highly testable frontend ecosystems.",
     "icon": "faAngular"
+  },
+  {
+    "name": "TypeScript",
+    "des": "Strongly typed language building on JavaScript, enabling enterprise-scale application development and robust component interfaces.",
+    "icon": "ts"
+  },
+  {
+    "name": "Next.js",
+    "des": "React framework for building scalable web applications, optimizing performance through server-side rendering and static site generation.",
+    "icon": "faServer"
+  },
+  {
+    "name": "Figma",
+    "des": "Collaborative interface design tool utilized for architecting scalable design systems and bridging UI/UX with front-end implementation.",
+    "icon": "faFigma"
+  },
+  {
+    "name": "Design Systems",
+    "des": "Architecting scalable, accessible component libraries and living documentation to enforce UI consistency across enterprise platforms.",
+    "icon": "faCubes"
   }
 ]

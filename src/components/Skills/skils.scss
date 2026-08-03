@@ -11,6 +11,7 @@ section#skills {
     justify-content: space-between;
     gap: 3vw;
     position: relative;
+
     &::before {
       position: absolute;
       content: '';
@@ -25,54 +26,55 @@ section#skills {
       border-radius: 20px;
       background-size: 200% auto;
     }
+  }
+}
 
-    li.skills-listItem {
-      display: flex;
-      flex-direction: column;
-      gap:8px;
-      backdrop-filter: blur(50px);
-      padding: 20px;
-      border-radius: 20px;
-      border: 1px solid rgba(253, 0, 249,0);
-      background-color: #01082488;
-      transition: all .5s linear;
-      transform: scale(1);
+/* Exact li.skills-listItem card styles (shared by grid + carousel) */
+li.skills-listItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(253, 0, 249, 0);
+  background-color: #01082488;
+  transition: all .5s linear;
+  transform: scale(1);
 
-      &:hover {
-        background-color: #01082488;
-        backdrop-filter: blur(75px);
-        border: 1px solid lime;
-        transform: scale(1.1);
+  &:hover {
+    background-color: #01082488;
+    backdrop-filter: blur(75px);
+    border: 1px solid lime;
+    transform: scale(1.1);
 
-        svg {
-          border: 1px solid lime;
-          transform: scale(1.1);
-          color: lime;
-        }
-      }
-
-      h3.skills-listItem-title {
-        font-weight: 500;
-        line-height: 2;
-      }
-
-      svg {
-        font-size: 30px;
-        background-color: #eee2;
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px solid rgba(253, 0, 249,0);
-        transition: all .5s linear;
-        width: fit-content;
-      }
-
-      .skills-listItem-description {
-        color: rgba(250,250,250,.5);
-        text-align: left;
-        width: 100%;
-        font-size: small;
-      }
+    svg {
+      border: 1px solid lime;
+      transform: scale(1.1);
+      color: lime;
     }
+  }
+
+  h3.skills-listItem-title {
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  svg {
+    font-size: 30px;
+    background-color: #eee2;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(253, 0, 249, 0);
+    transition: all .5s linear;
+    width: fit-content;
+  }
+
+  .skills-listItem-description {
+    color: rgba(250, 250, 250, .5);
+    text-align: left;
+    width: 100%;
+    font-size: small;
   }
 }
 
@@ -80,6 +82,133 @@ section#skills {
   section#skills {
     ul.skills-list {
       grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* ============================================
+   Carousel
+   - Always renders exactly 3 <li class="skills-listItem"> (left, center, right)
+   - Guarantees a max of 3 visible at a time
+   - Center prominent, left/right smaller + slightly transparent
+   - Buttons match existing app button aesthetic (NavBar/Home)
+   ============================================ */
+.skills-carousel {
+  margin: 60px 0 40px;
+  padding: 0 4px;
+
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  /* Carousel track always contains exactly 3 <li class="skills-listItem"> (left, center, right) */
+  .carousel-track {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 12px 0 28px;
+    margin: 0 auto;
+    max-width: calc(3 * 280px + 2 * 18px); /* visual container sized for max 3 */
+  }
+
+  /* Fixed item size so the three cards sit side-by-side.
+     Transition is declared here so side→center cards can grow and fade in. */
+  .skills-listItem {
+    flex: 0 0 280px;
+    width: 280px;
+    box-sizing: border-box;
+    will-change: transform, opacity;
+    /* Override the global li.skills-listItem transition for carousel behavior */
+    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1),
+                opacity 0.5s ease !important;
+  }
+
+  /* During rearrangement (right after prev/next click), disable transitions
+     and force the small state so the new trio paints at "from" size instantly.
+     Then when is-rearranging is removed and the middle gets .is-center,
+     the transition will run from small → full for the center card. */
+  .carousel-track.is-rearranging .skills-listItem {
+    transition: none !important;
+    transform: scale(0.82) !important;
+    opacity: 0.6 !important;
+  }
+
+  /* Side cards (when not the center) are small + transparent.
+     The !important ensures we win over the global base rule. */
+  .skills-listItem:not(.is-center) {
+    transform: scale(0.82) !important;
+    opacity: 0.6 !important;
+  }
+
+  /* When a card moves into the center slot, it grows and becomes opaque.
+     This is the target state for the transition triggered by button clicks. */
+  .skills-listItem.is-center {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    z-index: 2;
+  }
+
+  /* App-matching buttons (transparent + teal hover + animated gradient border) */
+  .carousel-btn {
+    position: relative;
+    background-color: transparent;
+    color: #eee;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    flex-shrink: 0;
+    z-index: 3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 8px;
+      padding: 1px;
+      background: transparent;
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+      animation: 10s rotate linear infinite;
+    }
+
+    &:hover {
+      color: #11ffc3;
+    }
+
+    &:hover::before {
+      background: #11ffc3;
+    }
+  }
+
+  /* Responsive: show ~1.5–2 items on small screens while keeping snap */
+  @media screen and (max-width: 767px) {
+    .skills-listItem {
+      flex: 0 0 70%;
+      min-width: 200px;
+    }
+
+    .skills-listItem:not(.is-center) {
+      transform: scale(0.88) !important;
+      opacity: 0.7;
     }
   }
 }
